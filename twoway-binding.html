@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>简易Vue双向绑定</title>
+  <script src="./twoway-bingding.js"></script>
+  <script>
+    // @:在DOMContentLoaded后完成vue初始化, 毕竟#app根元素还是要拿到的:)
+    document.addEventListener("DOMContentLoaded", function (event) {
+      var a = new Vue({
+        el: '#app',
+        data: {
+          str: 'hello'
+        }
+      })
+      setTimeout(function () {
+        a.data.str = 'world'
+      }, 3000)
+    });
+    </script>
+</head>
+<body>
+  <div id="app">
+    <input v-model="str"></input>
+    <p>Content of str is: {{str}}</p>
+  </div>
+</body>
+</html>
