@@ -28,6 +28,8 @@
    }, 3000)
    ```
 
+<br />
+
 
 
 > Object.defineProperty中通过getter和setter劫持数据变化
@@ -76,6 +78,8 @@ function defineReactive(data, key, value){
 }
 ```
 
+<br />
+
 
 
 > 观察者模式
@@ -86,9 +90,9 @@ function defineReactive(data, key, value){
 
 主题：一个可以被订阅的对象（报纸）
 
-		1. 内部有一个observers数组，其中记录了所有的订阅者（客户清单）
-  		2. 提供addObserver和removeObserver方法更新订阅者（维护客户清单)
-  		3. 提供一个notify方法，当主题发生变化时，通知所有的订阅者（有新一期报纸出版时，通知客户）
+1. 内部有一个observers数组，其中记录了所有的订阅者（客户清单）
+2. 提供addObserver和removeObserver方法更新订阅者（维护客户清单)
+3. 提供一个notify方法，当主题发生变化时，通知所有的订阅者（有新一期报纸出版时，通知客户）
 
 观察者：
 
@@ -129,6 +133,8 @@ Observer.prototype = {
 }
 ```
 
+<br />
+
 
 
 > data中的每个key都是一个主题
@@ -152,6 +158,8 @@ function defineReactive(data, key, value){
   })
 }
 ```
+
+<br />
 
 
 
@@ -201,6 +209,8 @@ Compile.prototype = {
 }
 ```
 
+<br />
+
 
 
 > 建立DOM和数据间的连接
@@ -222,6 +232,8 @@ function Vue(option){
   new Compile(this)// @:建立DOM和数据间的连接
 }
 ```
+
+<br />
 
 
 
@@ -289,6 +301,8 @@ Compile.prototype = {
 }
 ```
 
+<br />
+
 
 
 > 传递DOM
@@ -341,6 +355,8 @@ function defineReactive(data, key, value){
 }
 ```
 
+<br />
+
 
 
 > 思考：如何获得正确的oldVal值
@@ -390,3 +406,14 @@ Compile.prototype = {
 }
 ```
 
+<br />
+
+
+
+>参考资料
+
+[Observer vs Pub-Sub pattern](https://hackernoon.com/observer-vs-pub-sub-pattern-50d3b27f838c)
+
+[vue中数据绑定原理的设计模式到底观察者还是发布订阅？ - 张逸影的回答 - 知乎](https://www.zhihu.com/question/419154194/answer/1581917388)
+
+还有两篇2年前分别在[segmentfault](https://segmentfault.com/)和[掘金](https://juejin.cn/)上看的文章，已经找不到原文了: (
